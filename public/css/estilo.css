@@ -1,0 +1,263 @@
+body {
+    font-family: "Roboto", sans-serif;
+    color: #333;
+}
+
+a:link,
+a:active,
+a:visited {
+    color: #efefef;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* grid 960px */
+
+.linha {
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 48px;
+    display: flex;
+}
+
+.clientes {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-left: 10px;
+}
+
+
+/* estilos reutilizáveis */
+
+.sem-padding {
+    padding: 0 !important;
+}
+
+.sem-margin {
+    margin: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    margin: 15px 0 10px 0;
+}
+
+nav dl,
+ul,
+ol {
+    margin: 0;
+}
+
+nav ul.inline li {
+    display: inline;
+    margin-left: 1rem;
+}
+
+ul.sem-marcador,
+ol.sem-marcador {
+    list-style: none;
+}
+
+a.botao,
+input.botao {
+    background: #1f3c58;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #ebebeb;
+    cursor: pointer;
+    margin: 5px 0;
+    display: inline-block;
+    border: none;
+}
+
+a.botao:hover,
+input.botao:hover {
+    background: #315e8a;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* layout do site */
+
+.div-header {
+    background: #1f3c58;
+    width: 100%;
+    text-align: center;
+    padding: 0 48px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1.logo {
+    font-weight: 300;
+    color: #ebebeb;
+    letter-spacing: -2px;
+}
+
+.conteudo-extra {
+    background: #f1f2ea;
+}
+
+.footer {
+    display: flex;
+    background: #1f3c58;
+    color: #ebebeb;
+    padding: 20px 0;
+    text-align: center;
+    justify-content: center;
+    font-weight: 100;
+}
+
+.menu {
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.menu li a:hover {
+    text-decoration: none;
+    background: #1f3c58;
+    color: #ebebeb;
+}
+
+ul.noticias li {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+ul.noticias li img {
+    width: 70px;
+    height: auto;
+    margin-right: 10px;
+    float: left;
+}
+
+ul.noticias li h4 {
+    margin: -2px 0 5px 0;
+    font-weight: 500;
+}
+
+ul.noticias li p {
+    margin: 5px 0;
+    font-weight: 300;
+}
+
+ul.noticias li p a {
+    font-weight: 500;
+}
+
+.contato label {
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.contato input,
+.contato textarea {
+    display: block;
+    margin-bottom: 15px;
+    padding: 5px 2%;
+    width: 96%;
+}
+
+.contato textarea {
+    height: 150px;
+}
+
+.contato input.botao {
+    width: auto;
+}
+
+.coluna1 {
+    width: 40%;
+    margin: 0 0 0 5px;
+}
+
+.coluna2 {
+    width: 60%;
+    margin: 0 5px 0 0;
+    text-align: left;
+}
+
+.coluna3 {
+    width: 40%;
+    padding: 0 5px;
+    text-align: justify;
+}
+
+.coluna4 {
+    width: 60%;
+    padding: 0 0 0 15px;
+    margin-left: 10px;
+}
+
+.coluna6 {
+    width: 55%;
+    padding: 0 5px;
+    margin: 0 0 0 10px;
+    text-align: justify;
+}
+
+.coluna7 {
+    width: 45%;
+    padding: 0 0 0 15px;
+}
+
+.coluna.col7.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.coluna5 h2 {
+    text-align: center;
+}
+
+.linha.contato {
+    justify-content: space-between;
+    margin-right: 30px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 576px) {
+    .linha {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .coluna1,
+    .coluna2,
+    .coluna3,
+    .coluna4,
+    .coluna5,
+    .coluna6 {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+    nav {
+        display: none;
+    }
+    .clientes {
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
